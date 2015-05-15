@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{79473034-F7A8-4FE9-B1D0-B39F5985496C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoorConsumer", "DoorConsumer\DoorConsumer.csproj", "{E3AED202-6633-42C3-9F64-437221B6BEE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{5457D608-D2F7-4045-9819-9B5710EDEC76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PervasiveDigital.AllJoyn", "PervasiveDigital.AllJoyn\PervasiveDigital.AllJoyn.csproj", "{368719AC-A9C8-48BD-BDAD-685E7D242CB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{368719AC-A9C8-48BD-BDAD-685E7D242CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368719AC-A9C8-48BD-BDAD-685E7D242CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368719AC-A9C8-48BD-BDAD-685E7D242CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368719AC-A9C8-48BD-BDAD-685E7D242CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3AED202-6633-42C3-9F64-437221B6BEE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3AED202-6633-42C3-9F64-437221B6BEE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3AED202-6633-42C3-9F64-437221B6BEE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3AED202-6633-42C3-9F64-437221B6BEE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3AED202-6633-42C3-9F64-437221B6BEE3} = {79473034-F7A8-4FE9-B1D0-B39F5985496C}
+		{368719AC-A9C8-48BD-BDAD-685E7D242CB5} = {5457D608-D2F7-4045-9819-9B5710EDEC76}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = DoorConsumer\DoorConsumer.csproj
+	EndGlobalSection
+EndGlobal
