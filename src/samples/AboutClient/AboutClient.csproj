@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E3AED202-6633-42C3-9F64-437221B6BEE3}</ProjectGuid>
+    <ProjectGuid>{8B8BF34C-0B60-46CA-B2E8-D6D0FFBC8C91}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DoorConsumer</RootNamespace>
-    <AssemblyName>DoorConsumer</AssemblyName>
+    <RootNamespace>AboutClient</RootNamespace>
+    <AssemblyName>AboutClient</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -18,7 +18,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -36,10 +36,4 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\..\PervasiveDigital.AllJoyn\PervasiveDigital.AllJoyn.csproj">
-      <Project>{368719AC-A9C8-48BD-BDAD-685E7D242CB5}</Project>
-      <Name>PervasiveDigital.AllJoyn</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

@@ -3,6 +3,20 @@ using System.Runtime.InteropServices;
 
 namespace PervasiveDigital.AllJoyn.Native
 {
+	internal struct alljoyn_aboutlistener_callback
+	{
+		[MarshalAs(UnmanagedType.FunctionPtr)]
+		IntPtr about_listener_announced;
+	}
+	public delegate void AllJoynListenerCallback(
+		IntPtr context,
+		[MarshalAs(UnmanagedType.LPStr)] string busName,
+		UInt16 version,
+		IntPtr port, // alljoyn_sessionport port
+		IntPtr objectDescriptionArg, // alljoyn_msgarg
+		IntPtr aboutDataArg // alljoyn_msgarg
+		);
+
 	internal static class AllJoynNative
 	{
 		private const string LIBALLJOYN = "alljoyn_c"; // will trigger a search for liballjoyn.so
@@ -35,6 +49,22 @@ namespace PervasiveDigital.AllJoyn.Native
 
 		[DllImport(LIBALLJOYN)]
 		public static extern Int32 alljoyn_busattachment_connect(IntPtr bus, [MarshalAs(UnmanagedType.LPStr)] string connectSpec);
+
+		[DllImport(LIBALLJOYN)]
+		public static extern IntPtr alljoyn_busattachment_getuniquename (IntPtr bus);
+
+		[DllImport(LIBALLJOYN)]
+		public static extern Int32 alljoyn_busattachment_disconnect(IntPtr bus, [MarshalAs(UnmanagedType.LPStr)] string unused);
+
+		[DllImport(LIBALLJOYN)]
+		public static extern Int32 alljoyn_busattachment_createinterface(IntPtr bus, [MarshalAs(UnmanagedType.LPStr)] string name, ref IntPtr ifaceHandle);
+
+		// About
+		[DllImport(LIBALLJOYN)]
+		public static extern IntPtr /*alljoyn_aboutlistener*/ alljoyn_aboutlistener_create(AllJoynListenerCallback callback, IntPtr context);
+
+		[DllImport(LIBALLJOYN)]
+		public static extern void alljoyn_aboutlistener_destroy(IntPtr listenerHandle);
 	}
 }
 
